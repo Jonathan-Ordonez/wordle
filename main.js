@@ -23,3 +23,15 @@ let dict = [
   'genio',
   'pibes'
 ];
+document.addEventListener("DOMContentLoaded",())=>{
+  createSquares();
+  function createSquares() {
+    const gameBoard = document.getElementById("board");
+    for (let index = 0; index < 22; index++) {
+      let square = document.createElement("div");
+      square.classList.add("square");
+      square.setAtributte("id", index + 1);
+      gameBoard.appendChild(square);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+*{
+  margin:0;
+  padding: 0;
+}
+html, body{
+  height: 100%;
+  font-family: "areal";
+}
+#container{
+  display: flex;
+  background-color: black;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+header{
+  border-bottom: 1px solid rgb (50, 50, 60);
+}
+.titulo{
+  color: white;
+  font-size: 35px;
+  font-weight: bolud;
+  text-align: center;
+  margin: 0,4rem 0 0,4rem 0;
+  font-family: "areal"
+
+}
+#board-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  owerflow: hidden;
+}
+#board{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.square{
+  board: 2px; solid, balck;
+  min-width: 60px;
+  min-height: 60px;
+}
