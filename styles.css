@@ -1,46 +1,86 @@
-*{
-  margin:0;
-  padding: 0;
+/*Esto es para marcar las letras correctas, incorrectas o cercanas*/
+:root {
+  --ff: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  --clr-amarillo: 	#FFFF00;
+  --clr-verde: #008000;
+  --clr-gris: 	#808080;
 }
-html, body{
-  height: 100%;
-  font-family: "areal";
-}
-#container{
-  display: flex;
-  background-color: black;
-  height: 100%;
-  align-items: center;
-  flex-direction: column;
-}
-header{
-  border-bottom: 1px solid rgb (50, 50, 60);
-}
-.titulo{
-  color: white;
-  font-size: 35px;
-  font-weight: bolud;
-  text-align: center;
-  margin: 0,4rem 0 0,4rem 0;
-  font-family: "areal"
 
+
+body {
+  min-height: 100vh;
+  background-color: blue;
 }
-#board-container{
-  display: flex;
+
+#tabladelwordle {
+  margin: auto;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.main-content {
+  height: 100%;
+}
+
+.fila,
+.inputdelcuadrado {
   justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  owerflow: hidden;
+  display: flex;
 }
-#board{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 5px;
-  padding: 10px;
-  box-sizing: border-box;
+
+form.fila:first-child input.columna {
+  border-top: 2px solid black;
 }
-.square{
-  board: 2px; solid, balck;
-  min-width: 60px;
-  min-height: 60px;
+
+form.fila:last-child input.columna {
+  border-bottom: 2px solid black;
+}
+
+.columna {
+  height: 4rem;
+  width: 4rem;
+  text-transform: uppercase;
+}
+
+input.columna {
+  text-align: center;
+  font-size: 1.5rem;
+  border: solid black;
+  border-width: 1px;
+}
+
+input.columna:first-child {
+  border-left: 2px solid black;
+}
+
+input.columna:last-child {
+  border-right: 2px solid black;
+}
+
+.fila button[type="submit"] {
+  display: none;
+}
+
+.alert {
+  border-radius: 100vmax;
+  font-family: var(--ff);
+  margin: 2.5rem auto;
+  padding: 2em;
+  width: fit-content;
+}
+
+.correct {
+  border: 2px solid green;
+}
+
+.wrong {
+  border: 2px solid red;
+}
+
+.hidden {
+  display: none;
 }
